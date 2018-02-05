@@ -112,6 +112,7 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 	private final Map<String, Object> disposableBeans = new LinkedHashMap<String, Object>();
 
 	/** Map between containing bean names: bean name --> Set of bean names that the bean contains */
+	// containedBeanMap depenciesForBeanMap , What's the difference?
 	private final Map<String, Set<String>> containedBeanMap = new ConcurrentHashMap<String, Set<String>>(16);
 
 	/** Map between dependent bean names: bean name --> Set of dependent bean names */
